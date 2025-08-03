@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/htmx.org@2.0.1"
+        integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+        crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Profile</h1>
+    hx-getは指定したURLにgetリクエストを送信する属性<br>
+    <button hx-get="profile.html" hx-swap="outerHTML">Click</button><br>
+    hx-swapは対象の要素と、どのように交換するのかを指定する属性<br>
+    デフォルトでhx-swap="innerHTML"に設定されている。<br>
+    hx-targetはターゲットとして設定した場所に差し込むための属性<br>
+    <button hx-get="profile.html" hx-target="#response">Click2</button><br>
+    <div id="response">サンプル</div>
+    hx-triggerは特定のイベントが発生したときにサーバーにリクエストを送信する属性<br>
+    <button hx-get="profile.html" hx-swap="outerHTML" hx-trigger="mouseover">Mouseover</button><br>
+
+</body> 
+</html>
